@@ -25,6 +25,7 @@ header {
     padding: 2rem 0;
     position: relative;
     font-family: "Lato", sans-serif;
+
 }
 .header-background {
     position: absolute;
@@ -40,7 +41,9 @@ header {
     opacity: 1; /* Initially visible */
 }
 header h1 {
+
     font-size: 1rem;
+
 }
 
 /* Navigation styles */
@@ -54,6 +57,7 @@ nav ul {
     top: 0; /* Add this line */
     right: 0; /* Add this line */
     font-family: "Lato", sans-serif;
+    color: #c1d6f5;
 }
 
 nav ul li {
@@ -83,7 +87,6 @@ nav ul li a {
 /* Add a subtle pattern or texture to the background */
 .content-section::after {
     content: "";
-    background-image: url('.jpg'); /* Add the path to your pattern or texture image */
     opacity: 0.3; /* Adjust the opacity to control pattern visibility */
     position: absolute;
     top: 0;
@@ -94,7 +97,7 @@ nav ul li a {
 }
 
 /* Add a hover effect to make the section interactive */
-.content-section:hover {
+.content-section h2:hover {
     transform: scale(1.05); /* Slightly scale up on hover for an interactive effect */
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
@@ -117,6 +120,99 @@ button:hover {
 .content-section h2 {
     font-size: 1.5rem;
 }
+/* CSS for each image in the container */
+.image-container img {
+    max-width: 150px; /* Adjust the maximum width to make the images smaller */
+    height: 100; /* Maintain the image's aspect ratio */
+    margin-right: 30px; /* Add some space between images (you can adjust this value) */
+}
+
+/* CSS for the image container */
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start; /* Align images to the top within the container */
+    justify-content: center;
+
+
+}
+.image-container .image {
+    filter: saturate(0) blur(1px);
+    width: auto; /* Set a fixed width for all images */
+    height: 280px; /* Set a fixed height for all images */
+    margin-right: 25px; /* Add some space between images (you can adjust this value) */
+    margin-bottom: 10px; /* Add space below images to separate them vertically */
+    transition: transform 0.3s ease-in-out; /* Add hover effect */
+    
+
+}
+
+/* Hover effect for each image */
+.image-container .image:hover {
+    filter: blur(0px) saturate(1);
+    animation: arq 0.6s;
+    transform: scale(1.1); /* Scale up the image on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+/* CSS for the video container */
+/* CSS for the video container */
+.content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px ; /* Add spacing between videos */
+}
+    
+.video-container {
+    text-align: center;
+    margin-right: 40px ; /* Add spacing between videos */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 22px;
+    
+}
+
+/* CSS for the video element */
+.video-container video {
+    align-content: center;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 10px 15px rgba(255, 128, 0, 0.3);
+    transition: transform 0.2s ease-in-out;
+    margin-bottom: 20px;
+    margin-right: 0 auto;
+}
+
+/* Hover effect for video */
+.video-container video:hover {
+    transform: scale(1.03); /* Slightly scale up the video on hover */
+}
+/* CSS for the video description */
+/* CSS for the video description */
+.video-description {
+    color: #9db2f1; /* Text color */
+    padding: 10px; /* Padding */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* Box shadow */
+    font-size: 18px; /* Font size */
+    font-weight: 600; /* Font weight */
+    text-align: center; /* Center-align the text */
+    margin-top: 8px; /* Add some space above the text */
+    transition: background-color 0.3s ease-in-out; /* Smooth background color transition on hover */
+}
+
+/* Hover effect for video description */
+.video-description:hover {
+    color: #ffffff;
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+
+
 
 /* Footer styles */
 footer {
@@ -124,4 +220,14 @@ footer {
     padding: 1rem 0;
     background-color: #333;
     color: #fff;
+}
+
+@keyframes arq {
+    0% {
+        filter: blur(1px) saturate(0);
+        
+    }
+    100%{
+        filter: blur(0px) saturate(1);
+    }
 }
